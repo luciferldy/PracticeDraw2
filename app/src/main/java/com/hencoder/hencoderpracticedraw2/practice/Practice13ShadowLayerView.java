@@ -2,12 +2,14 @@ package com.hencoder.hencoderpracticedraw2.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice13ShadowLayerView extends View {
+
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice13ShadowLayerView(Context context) {
@@ -31,6 +33,7 @@ public class Practice13ShadowLayerView extends View {
         super.onDraw(canvas);
 
         paint.setTextSize(120);
+        paint.setShadowLayer(10, 10, 10, Color.RED);
         canvas.drawText("Hello HenCoder", 50, 200, paint);
     }
 }
